@@ -49,4 +49,18 @@ public class Arvore {
             percorrerPreOrdemRecursivo(no.direita);
         }
     }
+    public void percorrerPosOrdem() {
+        System.out.print("Pós-ordem: ");
+        percorrerPosOrdemRecursivo(raiz);
+        System.out.println();
+    }
+
+    private void percorrerPosOrdemRecursivo(No no) {
+        if (no != null) {
+            percorrerPosOrdemRecursivo(no.esquerda);
+            percorrerPosOrdemRecursivo(no.direita);
+            System.out.print(no.valor + " ");
+        }
+    }
+
 }
